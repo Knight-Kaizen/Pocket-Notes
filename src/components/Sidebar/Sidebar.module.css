@@ -1,0 +1,282 @@
+.main {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+
+.box1 {
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.text1 {
+    width: 70%;
+    height: 60%;
+    margin-left: 5%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2em;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.box2 {
+    height: 10%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button1 {
+    height: 50%;
+    width: 80%;
+    background: #000000;
+    border-radius: 50px;
+    color: white;
+    /* cursor: pointer; */
+
+}
+
+.button1:hover {
+    background-color: #555555;
+    box-shadow: 0 0 0 2px #434343;
+    cursor: pointer;
+}
+
+.text2 {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2em;
+    font-weight: 500;
+
+    letter-spacing: 0.01em;
+
+}
+
+.text3 {
+
+    font-size: 2em;
+    padding-bottom: 6px;
+
+}
+
+.box3 {
+    height: 80%;
+    width: 100%;
+}
+
+.modalarea {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2F2F2FBF;
+    transform: scale(1.1);
+}
+
+.newModal {
+    height: 30vh;
+    width: 40vw;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    position: absolute;
+    top: calc(50% - 15vh);
+    left: calc(50% - 20vw);
+    box-shadow: rgba(0, 0, 0, 0.07) 1000px 1000px,
+        rgba(0, 0, 0, 0.07) -1000px -1000px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.modalBox1 {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.closeBtn {
+
+    margin-left: 50%;
+}
+
+.closeBtn:hover {
+    cursor: pointer;
+
+}
+
+.modalBox2 {
+    height: 20%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.modalValidation {
+    height: 10%;
+}
+
+.validationText {
+    margin: 0;
+    padding: 0;
+    font-size: .7em;
+    margin-left: 180px;
+    color: red;
+}
+
+.modalBox3 {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.modalColorBox {
+    width: 60%;
+    height: 40%;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    height: 100%;
+    width: 6.5%;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+
+.color1 {
+    background: #B38BFA;
+}
+
+.color1:hover {
+    box-shadow: 0 0 0 2px #7737e2;
+}
+
+.color2 {
+    background: #FF79F2;
+}
+
+.color2:hover {
+    box-shadow: 0 0 0 2px #d900ca;
+}
+
+.color3 {
+    background: #43E6FC;
+}
+
+.color3:hover {
+    box-shadow: 0 0 0 2px #00d1f3;
+}
+
+.color4 {
+    background: #F19576;
+}
+
+.color4:hover {
+    box-shadow: 0 0 0 2px #f2693b;
+}
+
+.color5 {
+    background: #0047FF;
+}
+
+.color5:hover {
+    box-shadow: 0 0 0 2px #0033e6;
+}
+
+.color6 {
+    background: #6691FF;
+}
+
+.color6:hover {
+    box-shadow: 0 0 0 2px #0055e9;
+}
+
+.modalBox4 {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.modalText3 {
+    padding-left: 15px;
+    font-weight: 500;
+    font-size: 1.3em;
+    line-height: 160.19%;
+    letter-spacing: 0.035em;
+    color: #000000;
+}
+
+.modalText1 {
+    font-size: 1.1em;
+    letter-spacing: 0.035em;
+    padding-left: 15px;
+    color: #000000;
+}
+
+.modalInput1 {
+    width: 55%;
+    margin-left: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+    outline: none;
+    padding: .4em;
+    padding-left: 1em;
+    color: #000;
+}
+
+.modalInput1:focus {
+    border: none;
+    box-shadow: 0 0 7px #818181;
+}
+
+.button2 {
+    height: 50%;
+    width: 20%;
+    background: #000;
+    border-radius: 15px;
+    margin-left: 75%;
+}
+
+.button2:hover {
+    background-color: #555555;
+    box-shadow: 0 0 0 2px #434343;
+    cursor: pointer;
+}
+
+.text4 {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected {
+    box-shadow: 0 0 10px #c2c2c2 inset;
+    box-shadow: 0 0 2px 5px #c2c2c2;
+}

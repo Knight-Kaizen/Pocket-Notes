@@ -1,0 +1,52 @@
+.main {
+    height: 100%;
+    width: 100%;
+    background: #dedede;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageBox {
+    height: 50%;
+    width: 70%;
+}
+
+.diary {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.text1 {
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 97.69%;
+    letter-spacing: 0.02em;
+    color: #3c3c3c;
+}
+
+.text2 {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 1.5em;
+    line-height: 97.69%;
+    letter-spacing: 0.02em;
+    color: #3c3c3c;
+}
+
+.text3 {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 97.69%;
+    letter-spacing: 0.02em;
+    color: #3c3c3c;
+}

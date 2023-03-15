@@ -1,0 +1,32 @@
+.main {
+  height: 100%;
+  width: 100%;
+  /* background: grey; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.setIt {
+  margin: 2px 0;
+  min-height: 12.5%;
+  max-height: 12.5%;
+  width: 90%;
+  margin-left: 10%;
+  border-radius: 30px 0 0 30px;
+
+}
+
+.setIt:hover {
+  cursor: pointer;
+  box-shadow: 0 0 7px #818181;
+}
+
+.selected {
+  background: #F7ECDC;
+}

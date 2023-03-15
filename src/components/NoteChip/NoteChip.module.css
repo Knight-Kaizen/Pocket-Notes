@@ -1,0 +1,45 @@
+.main {
+    width: 100%;
+    display: flex;
+}
+
+.time {
+    width: 20%;
+}
+
+.note {
+    width: 80%;
+}
+
+.text {
+    font-weight: 500;
+
+    line-height: 140%;
+    letter-spacing: 0.02em;
+
+    color: #353535;
+
+
+}
+
+.text1 {
+    font-size: .8em;
+    margin-left: 20%;
+    margin-bottom: 0;
+}
+
+.text2 {
+    font-size: .8em;
+    margin-top: 0;
+    margin-left: 20%;
+    line-height: 100%;
+}
+
+.text3 {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 140%;
+    /* or 29px */
+
+    letter-spacing: 0.035em;
+}
