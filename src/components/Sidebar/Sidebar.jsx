@@ -79,9 +79,6 @@ export default function Sidebar() {
 
           <input className={styles.modalInput1} type='text' spellCheck='false' placeholder='Enter your group name...'
             onChange={handleChange}
-          // onClick = {(e)=>{
-
-          // }}
           ></input>
 
 
