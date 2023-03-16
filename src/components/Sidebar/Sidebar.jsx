@@ -68,26 +68,23 @@ export default function Sidebar() {
 
   const Modal = () => (
     <div className={styles.modalarea}>
-      <div className={width >= 600 ? styles.newModal : styles.newModal2}>
+      <div className={width >= 770 ? styles.newModal : styles.newModal2}>
 
         <div className={styles.modalBox1}>
           <p className={styles.modalText3}>Create New Notes</p>
-          <p className={`${width >= 600 ? styles.modalText3 : styles.modalText31} ${width >= 600 ? styles.closeBtn : styles.closeBtn2}`} onClick={(e) => { setModalDisplay(false) }}>X</p>
+          <p className={`${width >= 770 ? styles.modalText3 : styles.modalText31} ${width >= 600 ? styles.closeBtn : styles.closeBtn2}`} onClick={(e) => { setModalDisplay(false) }}>X</p>
         </div>
-        <div className={width >= 600 ? styles.modalBox2 : styles.modalBox22}>
+        <div className={width >= 770 ? styles.modalBox2 : styles.modalBox22}>
           <p className={styles.modalText1}>Group Name</p>
 
-          <input className={ styles.modalInput1} type='text' spellCheck='false' placeholder='Enter your group name...'
+          <textarea className={ width >= 770 ? styles.modalInput1: styles.modalInput11} type='text' spellCheck='false' placeholder='Enter your group name...'
             onChange={handleChange}
-          // onClick = {(e)=>{
-
-          // }}
-          ></input>
+          ></textarea>
 
 
         </div>
-        <div className={width >= 600 ? styles.modalValidation : styles.modalValidation2}>{<p className={styles.validationText}>{isBlank ? 'Feild can\'t be blank!' : isRepeat ? 'Group with same name exists' : ''}</p>}</div>
-        <div className={width >= 600 ? styles.modalBox3 : styles.modalBox32}>
+        <div className={width >= 770 ? styles.modalValidation : styles.modalValidation2}>{<p className={styles.validationText}>{isBlank ? 'Feild can\'t be blank!' : isRepeat ? 'Group with same name exists' : ''}</p>}</div>
+        <div className={width >= 770 ? styles.modalBox3 : styles.modalBox32}>
           <p className={styles.modalText1}>Choose color</p>
           <div className={styles.modalColorBox}>
             <div className={`${styles.color1} ${width >= 600 ? styles.color : styles.color22}`} onClick={() => { newGroupColor = 1 }}></div>

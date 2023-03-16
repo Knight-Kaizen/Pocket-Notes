@@ -152,7 +152,7 @@
 }
 
 .modalBox22 {
-    height: 20%;
+    height: 25%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -164,7 +164,7 @@
 
 .modalValidation2 {
     margin-top: 3%;
-    margin-left: -35%;
+    margin-left: -30%;
 }
 
 .validationText {
@@ -292,7 +292,8 @@
 }
 
 .modalInput1 {
-    width: 55%;
+    height: 60%;
+    width: 50%;
     margin-left: 50px;
     border: 1px solid black;
     border-radius: 15px;
@@ -300,11 +301,45 @@
     padding: .4em;
     padding-left: 1em;
     color: #000;
+    outline: none;
+    resize: none;
+    font-size: 1em;
+    padding: 0;
+    padding-left: 3%;
+    padding-top: 1%;
+
+}
+.modalInput11{
+    height: 80%;
+    width: 70%;
+    margin-left: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+    outline: none;
+    padding: .4em;
+    padding-left: 1em;
+    color: #000;
+    outline: none;
+    resize: none;
+    font-size: 1em;
+    padding: 0;
+    padding-left: 3%;
+    margin-top: 0;
 }
 
 .modalInput1:focus {
     border: none;
     box-shadow: 0 0 7px #818181;
+}
+.modalInput11:focus{
+    border: none;
+    box-shadow: 0 0 7px #818181;
+}
+.modalInput1::-webkit-scrollbar{
+    width: 0;
+}
+.modalInput11::-webkit-scrollbar{
+    width: 0;
 }
 
 .button2 {
