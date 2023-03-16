@@ -77,7 +77,7 @@ export default function Sidebar() {
         <div className={width >= 600 ? styles.modalBox2 : styles.modalBox22}>
           <p className={styles.modalText1}>Group Name</p>
 
-          <input className={width >= 600 ? styles.modalInput1: styles.modalInput11} type='text' spellCheck='false' placeholder='Enter your group name...'
+          <input className={ styles.modalInput1} type='text' spellCheck='false' placeholder='Enter your group name...'
             onChange={handleChange}
           // onClick = {(e)=>{
 
