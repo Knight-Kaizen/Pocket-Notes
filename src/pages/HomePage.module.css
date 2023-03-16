@@ -5,12 +5,29 @@
     display: flex;
 }
 
+.main2 {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
 .sideBar {
     height: 98%;
     width: 30%;
 }
 
+.navBar {
+    height: 10%;
+    width: 100%;
+}
+
 .MainBox {
     height: 98%;
     width: 70%;
+}
+
+.MainBox2 {
+    height: 89%;
+    width: 100%;
 }

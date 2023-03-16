@@ -14,12 +14,38 @@
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      font-size: 16px;
+      
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-    
+    html {
+ font-size:1rem;
+}
+@media (max-width: 639px){
+  html{
+    font-size: 10px;
+  }
+}
+/* Define breakpoints and font sizes */
+@media (min-width:640px) and (max-width:1023px) {
+ html {
+  font-size: 12px;
+ }
+}
+
+@media (min-width:1024px) and (max-width:1399px) {
+ html {
+  font-size: 16px;
+ }
+}
+
+/* Define max font size and viewport */
+@media (min-width:1400px) {
+ html {
+  font-size: 24px;
+ }
+}
     
   </style>
   <title>Pocket Notes</title>

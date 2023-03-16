@@ -3,6 +3,8 @@ import Sidebar from '../components/Sidebar/Sidebar'
 import MainBox from '../components/MainBox/MainBox'
 import styles from './HomePage.module.css'
 import MainBoxEmpty from '../components/MainBoxEmpty/MainBoxEmpty';
+import useWindowResize from '../hooks/useWindowResize';
+import Navbar from '../components/Navbar/Navbar';
 
 
 const UserContext = createContext();
@@ -14,27 +16,43 @@ export default
     const [dataUpdate, setDataUpdate] = useState(false);
     const [selectedNote, setSelectedNote] = useState({});
     const [selectedChip, setSelectedChip] = useState('');
+
+    const { width, height } = useWindowResize();
+
+
+
+
+
+
     useEffect(() => {
         const tempData = localStorage.getItem('data');
         if (tempData) {
             setDataAvailable(true);
-            // console.log("checking data availability in main");
+
         }
     }, [])
+    const [showSidebar, setShowSidebar] = useState(false);
+    function handleChange(e) {
 
+        setShowSidebar(showSidebar ? false : true);
 
+    }
 
     return (
         <UserContext.Provider value={{
             showMain, setShowMain, selectedNote, setSelectedNote, selectedChip, setSelectedChip, dataAvailable, setDataAvailable
-            , dataUpdate, setDataUpdate
+            , dataUpdate, setDataUpdate, setShowSidebar
         }}>
-            <div className={styles.main}>
-                <div className={styles.sideBar}>
-                    <Sidebar />
+
+            <div className={width >= 600 ? styles.main : styles.main2}>
+                <div className={width >= 600 ? styles.sideBar : styles.navBar}>
+                    {width >= 600 && <Sidebar />}
+                    {width < 600 && <Navbar handleChange={handleChange} />}
                 </div>
-                <div className={styles.MainBox}>
-                    {showMain ? < MainBox {...selectedNote} /> : <MainBoxEmpty />}
+
+                <div className={width >= 600 ? styles.MainBox : styles.MainBox2}>
+                    {width < 600 && showSidebar ? <Sidebar /> :
+                        showMain ? < MainBox {...selectedNote} /> : <MainBoxEmpty />}
 
                 </div>
             </div>

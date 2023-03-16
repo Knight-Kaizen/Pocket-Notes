@@ -5,7 +5,7 @@ import { UserContext } from '../../pages/HomePage';
 export default function Groups(item) {
 
     //-----------------------Functionality-----------
-    const { dataAvailable, selectedChip, setSelectedChip, setSelectedNote, dataUpdate, setDataUpdate, setShowMain } = useContext(UserContext);
+    const { dataAvailable, setShowSidebar, selectedChip, setSelectedChip, setSelectedNote, dataUpdate, setDataUpdate, setShowMain } = useContext(UserContext);
     let storedData = localStorage.getItem('data');
     let currData = storedData ? JSON.parse(storedData) : [];
     let [chips, setChips] = useState(null);
@@ -16,14 +16,15 @@ export default function Groups(item) {
         setShowMain(false);
         setShowMain(true);
         setSelectedNote(item);
-        // console.log(item.name, " clicked");
+        setShowSidebar(false);
+
     }
 
 
 
     function displayChips() {
         setChips(currData.map((item, indx) => {
-            // console.log(item);
+
             return (
                 <div className={`${styles.setIt} ${item.name == selectedChip && styles.selected}`}
 
@@ -51,9 +52,9 @@ export default function Groups(item) {
 
 
     useEffect(() => {
-        // console.log('checking availability in groups')
+
         if (dataAvailable) {
-            // console.log('groups: data available');
+
             displayChips();
 
         }

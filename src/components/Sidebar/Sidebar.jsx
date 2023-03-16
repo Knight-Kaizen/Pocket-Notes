@@ -4,12 +4,13 @@ import Groups from '../Groups/Groups';
 import styles from './Sidebar.module.css'
 import { UserContext } from '../../pages/HomePage';
 import NameChip from '../NameChip/NameChip';
+import useWindowResize from '../../hooks/useWindowResize';
 export default function Sidebar() {
 
   //--------------------------Functionality-----------------------
 
   const { showMain, setSelectedChip, setSelectedNote, setShowMain, dataAvailable, setDataAvailable, dataUpdate, setDataUpdate } = useContext(UserContext);
-
+  const { width } = useWindowResize();
   let newGroupName = '';
   let newGroupColor = 1;
 
@@ -67,13 +68,13 @@ export default function Sidebar() {
 
   const Modal = () => (
     <div className={styles.modalarea}>
-      <div className={styles.newModal}>
+      <div className={width >= 600 ? styles.newModal : styles.newModal2}>
 
         <div className={styles.modalBox1}>
           <p className={styles.modalText3}>Create New Notes</p>
-          <p className={`${styles.modalText3} ${styles.closeBtn}`} onClick={(e) => { setModalDisplay(false) }}>X</p>
+          <p className={`${width >= 600 ? styles.modalText3 : styles.modalText31} ${width >= 600 ? styles.closeBtn : styles.closeBtn2}`} onClick={(e) => { setModalDisplay(false) }}>X</p>
         </div>
-        <div className={styles.modalBox2}>
+        <div className={width >= 600 ? styles.modalBox2 : styles.modalBox22}>
           <p className={styles.modalText1}>Group Name</p>
 
           <input className={styles.modalInput1} type='text' spellCheck='false' placeholder='Enter your group name...'
@@ -85,16 +86,16 @@ export default function Sidebar() {
 
 
         </div>
-        <div className={styles.modalValidation}>{<p className={styles.validationText}>{isBlank ? 'Feild can\'t be blank!' : isRepeat ? 'Group with same name exists' : ''}</p>}</div>
-        <div className={styles.modalBox3}>
+        <div className={width >= 600 ? styles.modalValidation : styles.modalValidation2}>{<p className={styles.validationText}>{isBlank ? 'Feild can\'t be blank!' : isRepeat ? 'Group with same name exists' : ''}</p>}</div>
+        <div className={width >= 600 ? styles.modalBox3 : styles.modalBox32}>
           <p className={styles.modalText1}>Choose color</p>
           <div className={styles.modalColorBox}>
-            <div className={`${styles.color1} ${styles.color}`} onClick={() => { newGroupColor = 1 }}></div>
-            <div className={`${styles.color2} ${styles.color}`} onClick={() => { newGroupColor = 2 }}></div>
-            <div className={`${styles.color3} ${styles.color}`} onClick={() => { newGroupColor = 3 }}></div>
-            <div className={`${styles.color4} ${styles.color}`} onClick={() => { newGroupColor = 4 }}></div>
-            <div className={`${styles.color5} ${styles.color}`} onClick={() => { newGroupColor = 5 }}></div>
-            <div className={`${styles.color6} ${styles.color}`} onClick={() => { newGroupColor = 6 }}></div>
+            <div className={`${styles.color1} ${width >= 600 ? styles.color : styles.color22}`} onClick={() => { newGroupColor = 1 }}></div>
+            <div className={`${styles.color2} ${width >= 600 ? styles.color : styles.color22}`} onClick={() => { newGroupColor = 2 }}></div>
+            <div className={`${styles.color3} ${width >= 600 ? styles.color : styles.color22}`} onClick={() => { newGroupColor = 3 }}></div>
+            <div className={`${styles.color4} ${width >= 600 ? styles.color : styles.color22}`} onClick={() => { newGroupColor = 4 }}></div>
+            <div className={`${styles.color5} ${width >= 600 ? styles.color : styles.color22}`} onClick={() => { newGroupColor = 5 }}></div>
+            <div className={`${styles.color6} ${width >= 600 ? styles.color : styles.color22}`} onClick={() => { newGroupColor = 6 }}></div>
           </div>
         </div>
         <div className={styles.modalBox4}>
@@ -110,9 +111,9 @@ export default function Sidebar() {
   return (
     <>
       <div className={styles.main}>
-        <div className={styles.box1}>
+        {width >= 600 && <div className={styles.box1}>
           <p className={styles.text1}>Pocket Notes</p>
-        </div>
+        </div>}
         <div className={styles.box2}>
           <div className={styles.button1} onClick={() => {
             setModalDisplay(true);

@@ -1,21 +1,21 @@
 import React, { useContext, useEffect, useState } from 'react'
+import useWindowResize from '../../hooks/useWindowResize';
 import { UserContext } from '../../pages/HomePage';
 import NameChip from '../NameChip/NameChip'
 import NoteChip from '../NoteChip/NoteChip'
 import styles from './MainBox.module.css'
 
 export default function MainBox(selectedItem) {
-  // console.log('mainbox: selected item is: ', item);
+
   let [newNote, setNewNote] = useState('');
   let [updateNotes, setUpdateNotes] = useState(true);
 
   let storedData = localStorage.getItem('data');
   let currData = storedData ? JSON.parse(storedData) : [];
   const { selectedNote } = useContext(UserContext);
-  // console.log('rendering main');
 
   function handleChange(e) {
-    // console.log(e.target.value);
+
     setNewNote(e.target.value);
   }
   function addNote(date, time) {
@@ -26,23 +26,23 @@ export default function MainBox(selectedItem) {
     }
     const newData = currData.map((item) => {
       if (selectedItem.name === item.name) {
-        // console.log('matced');
+
         selectedItem.notes.push(addNoteData);
         setNewNote('');
-        // console.log(selectedItem);
+
         return selectedItem;
       }
       else
         return item;
     })
-    // console.log(newData);
+
     localStorage.setItem('data', JSON.stringify(newData));
     setUpdateNotes(true);
   }
   function createNote() {
-    // newNote = newNote.replace(/\s+/g, '');
+
     newNote = newNote.trim();
-    // console.log(newNote);
+
     if (newNote.length > 0) {
       var today = new Date();
       var date = today.getDate() + ' ' + today.toLocaleString('default', { month: 'long' }) + ' ' + today.getFullYear();
@@ -55,7 +55,7 @@ export default function MainBox(selectedItem) {
       var time = hours + ":" + minutes + " " + am_pm;
       var dateTime = date + ' ' + time;
 
-      // console.log(dateTime);
+
       addNote(date, time);
     }
 
@@ -65,7 +65,7 @@ export default function MainBox(selectedItem) {
 
 
   useEffect(() => {
-    // console.log('effect running...');
+
     if (updateNotes) {
       setDisplayNotes(
         selectedItem.notes.map((notes) => {
@@ -76,7 +76,7 @@ export default function MainBox(selectedItem) {
       )
       setUpdateNotes(false);
     }
-    // console.log('checking diplayNotes: ', displayNotes);
+
   }, [updateNotes])
 
   useEffect(() => {
