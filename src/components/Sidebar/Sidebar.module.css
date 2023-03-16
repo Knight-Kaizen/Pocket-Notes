@@ -301,7 +301,16 @@
     padding-left: 1em;
     color: #000;
 }
-
+.modalInput11{
+    width: 55%;
+    margin-left: 50px;
+    border: 1px solid black;
+    border-radius: 15px;
+    outline: none;
+    padding: .4em;
+    padding-left: 1em;
+    color: #000;
+}
 .modalInput1:focus {
     border: none;
     box-shadow: 0 0 7px #818181;
